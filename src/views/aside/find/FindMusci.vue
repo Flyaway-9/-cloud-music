@@ -1,25 +1,28 @@
 <template>
   <div>
     <tab-control :titles="titles"></tab-control>
-    <router-view></router-view>
+    <router-view> </router-view>
   </div>
 </template>
 
 <script>
-import TabControl from 'components/common/tabcontrol/TabControl.vue'
+import TabControl from "components/common/tabcontrol/TabControl.vue";
 export default {
-  name: 'FindMusic',
+  name: "FindMusic",
   data() {
     return {
-      titles: ['个性推荐','歌单','排行榜','歌手','最新音乐'],
-    }
+      titles: [
+        { title: "个性推荐", path: "/recommend" },
+        { title: "歌单", path: "/playlist" },
+        { title: "排行榜", path: "/songschart" },
+        { title: "歌手", path: "/singer" },
+        { title: "最新音乐", path: "/newestMusic" },
+      ],
+    };
   },
   components: {
-    TabControl
-  }
-}
+    TabControl,
+  },
+};
 </script>
-
-<style>
-
-</style>
+<style></style>

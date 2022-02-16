@@ -7,8 +7,14 @@ module.exports ={
         'common': '@/common',
         'network': '@/network',
         'router': 'router',
-        'views': '@/views'
+        'views': '@/views',
+        'store': '@/store',
+        'utils': '@/utils'
       }
+    },
+    
+    externals: {  
+      express: 'express' 
     }
   }
 }
